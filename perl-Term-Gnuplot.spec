@@ -29,7 +29,7 @@ This module is intended for low-resolution or high-resolution graphics
 using gnuplot low-level functions.
 
 %description -l pl
-Ten modu³ jest przenaczony do tworzenia grafiki niskiej lub wysokiej
+Ten modu³ jest przeznaczony do tworzenia grafiki niskiej lub wysokiej
 rozdzielczo¶ci przy u¿yciu niskopoziomowych funkcji gnuplota.
 
 %prep
