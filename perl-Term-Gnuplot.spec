@@ -4,8 +4,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Term
-%define	pnam	Gnuplot
+%define		pdir	Term
+%define		pnam	Gnuplot
 Summary:	Term::Gnuplot - lowlevel graphics using gnuplot drawing routines
 Summary(pl):	Term::Gnuplot - niskopoziomowa grafika przy u¿yciu funkcji rysuj±cych gnuplota
 Name:		perl-Term-Gnuplot
