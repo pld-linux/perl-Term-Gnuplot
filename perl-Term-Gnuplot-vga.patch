@@ -1,0 +1,21 @@
+--- Term-Gnuplot-0.5704/gnuterm/term/linux.trm.orig	1999-11-05 01:05:51.000000000 +0100
++++ Term-Gnuplot-0.5704/gnuterm/term/linux.trm	2003-10-25 21:05:50.900148216 +0200
+@@ -98,8 +98,6 @@
+ static int linux_startx, linux_starty, linux_lasty;
+ static int linux_angle;
+ int LINUX_graphics_allowed;
+-extern void drop_privilege();
+-extern void take_privilege();
+ 
+ typedef (*linux_line_func_ptr) __PROTO((int x1, int y1, int x2, int y2));
+ 
+@@ -132,9 +130,7 @@
+ 	    LINUX_graphics_allowed = TRUE;
+     }
+     if (LINUX_graphics_allowed) {
+-	take_privilege();
+ 	vga_init();
+-	drop_privilege();
+     } else {
+ 	/* err - shouldn't we give up root uid whatever happens ?
+ 	 * or perhaps vga_init() does it ?
