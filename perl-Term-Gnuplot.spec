@@ -16,10 +16,10 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ed096195e39e1a8ee3dd1fe36f1f6906
-#Patch0:		%{name}-vga.patch
+Patch0:		%{name}-vga.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	gd-devel
-BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	perl-devel >= 1:5.8.0
 %{?with_svga:BuildRequires:	svgalib-devel}
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,11 +34,11 @@ rozdzielczo¶ci przy u¿yciu niskopoziomowych funkcji gnuplota.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-#%patch -p1
+%patch -p1
 
 %build
 %{__perl} Makefile.PL \
-	TRY_LIBS="-L/usr/X11R6/lib -lX11 -lm -lgd -lpng -lz %{?with_svga:-lvga}" \
+	TRY_LIBS="-L/usr/X11R6/%{_lib} -lX11 -lm -lgd -lpng -lz %{?with_svga:-lvga}" \
 	INSTALLDIRS=vendor
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
