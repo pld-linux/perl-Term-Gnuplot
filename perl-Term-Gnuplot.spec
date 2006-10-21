@@ -9,13 +9,13 @@
 Summary:	Term::Gnuplot - lowlevel graphics using gnuplot drawing routines
 Summary(pl):	Term::Gnuplot - niskopoziomowa grafika przy u¿yciu funkcji rysuj±cych gnuplota
 Name:		perl-Term-Gnuplot
-Version:	0.5704
-Release:	1
+Version:	0.90380905
+Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ed096195e39e1a8ee3dd1fe36f1f6906
+# Source0-md5:	ceccd4e30deb6291ebecce176e715208
 Patch0:		%{name}-vga.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	gd-devel
@@ -34,7 +34,8 @@ rozdzielczo¶ci przy u¿yciu niskopoziomowych funkcji gnuplota.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch0 -p1
+# is it still necessary?
+#%%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
