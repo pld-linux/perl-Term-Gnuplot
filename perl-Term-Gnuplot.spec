@@ -18,11 +18,11 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	ceccd4e30deb6291ebecce176e715208
 Patch0:		%{name}-vga.patch
 URL:		http://search.cpan.org/dist/Term-Gnuplot/
-BuildRequires:	XFree86-devel
 BuildRequires:	gd-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 %{?with_svga:BuildRequires:	svgalib-devel}
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	xorg-lib-libX11-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,7 +39,7 @@ rozdzielczo¶ci przy u¿yciu niskopoziomowych funkcji gnuplota.
 
 %build
 %{__perl} Makefile.PL \
-	TRY_LIBS="-L/usr/X11R6/%{_lib} -lX11 -lm -lgd -lpng -lz %{?with_svga:-lvga}" \
+	TRY_LIBS="-lX11 -lm -lgd -lpng -lz %{?with_svga:-lvga}" \
 	INSTALLDIRS=vendor
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
