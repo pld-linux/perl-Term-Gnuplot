@@ -7,7 +7,7 @@
 %define		pdir	Term
 %define		pnam	Gnuplot
 Summary:	Term::Gnuplot - lowlevel graphics using gnuplot drawing routines
-Summary(pl):	Term::Gnuplot - niskopoziomowa grafika przy uøyciu funkcji rysuj±cych gnuplota
+Summary(pl.UTF-8):   Term::Gnuplot - niskopoziomowa grafika przy u≈ºyciu funkcji rysujƒÖcych gnuplota
 Name:		perl-Term-Gnuplot
 Version:	0.90380905
 Release:	1
@@ -29,9 +29,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module is intended for low-resolution or high-resolution graphics
 using gnuplot low-level functions.
 
-%description -l pl
-Ten modu≥ jest przeznaczony do tworzenia grafiki niskiej lub wysokiej
-rozdzielczo∂ci przy uøyciu niskopoziomowych funkcji gnuplota.
+%description -l pl.UTF-8
+Ten modu≈Ç jest przeznaczony do tworzenia grafiki niskiej lub wysokiej
+rozdzielczo≈õci przy u≈ºyciu niskopoziomowych funkcji gnuplota.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
