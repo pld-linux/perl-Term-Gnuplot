@@ -7,7 +7,7 @@
 %define		pdir	Term
 %define		pnam	Gnuplot
 Summary:	Term::Gnuplot - lowlevel graphics using gnuplot drawing routines
-Summary(pl.UTF-8):   Term::Gnuplot - niskopoziomowa grafika przy użyciu funkcji rysujących gnuplota
+Summary(pl.UTF-8):	Term::Gnuplot - niskopoziomowa grafika przy użyciu funkcji rysujących gnuplota
 Name:		perl-Term-Gnuplot
 Version:	0.90380905
 Release:	1
