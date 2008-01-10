@@ -42,6 +42,7 @@ rozdzielczości przy użyciu niskopoziomowych funkcji gnuplota.
 	TRY_LIBS="-lX11 -lm -lgd -lpng -lz %{?with_svga:-lvga}" \
 	INSTALLDIRS=vendor
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test </dev/null}
