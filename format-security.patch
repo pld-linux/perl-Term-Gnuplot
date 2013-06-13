@@ -1,0 +1,11 @@
+--- Term-Gnuplot-0.90380905/gnuterm/term/post.trm~	2002-09-04 00:41:04.000000000 +0200
++++ Term-Gnuplot-0.90380905/gnuterm/term/post.trm	2013-06-13 17:23:49.684105533 +0200
+@@ -1562,7 +1562,7 @@
+     if (!ps_common_portrait) {
+ 	fprintf(gpoutfile,"90 rotate\n0 %d translate\n", (int)(-PS_YMAX));
+     }
+-    fprintf(gpoutfile, psg1);
++    fprintf(gpoutfile, "%s", psg1);
+     if (ps_common_uses_fonts)
+ 	fprintf(gpoutfile, "(%s) findfont %d scalefont setfont\n",
+ 		ps_font, (t->v_char) );
