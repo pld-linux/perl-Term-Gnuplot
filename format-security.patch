@@ -9,3 +9,14 @@
      if (ps_common_uses_fonts)
  	fprintf(gpoutfile, "(%s) findfont %d scalefont setfont\n",
  		ps_font, (t->v_char) );
+--- Term-Gnuplot-0.90380905/Gnuplot.xs~	2006-05-25 05:02:22.000000000 +0200
++++ Term-Gnuplot-0.90380905/Gnuplot.xs	2013-06-13 23:03:54.094869081 +0200
+@@ -38,7 +38,7 @@
+ 	char buf[80];
+ 	sprintf(buf, "panic: more than %d tokens for options: %d",
+ 		MAX_TOKENS, num_tokens);
+-	croak(buf);
++	croak("%s", buf);
+     }
+     while (num_tokens > tk) {
+ 	SV *elt = *svp++;
