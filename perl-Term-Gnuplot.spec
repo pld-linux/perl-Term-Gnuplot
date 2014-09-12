@@ -63,6 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc README
 %{perl_vendorarch}/Term/Gnuplot.pm
 %dir %{perl_vendorarch}/auto/Term/Gnuplot
-%{perl_vendorarch}/auto/Term/Gnuplot/Gnuplot.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Term/Gnuplot/Gnuplot.so
 %{_mandir}/man3/Term::Gnuplot*
