@@ -3,7 +3,6 @@
 %bcond_with	svga	# build with svgalib output support
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Term
 %define		pnam	Gnuplot
 Summary:	Term::Gnuplot - lowlevel graphics using gnuplot drawing routines
